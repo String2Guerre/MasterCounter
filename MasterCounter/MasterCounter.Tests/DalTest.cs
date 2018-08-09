@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MasterCounter.WebApp.DAL;
 using MasterCounter.WebApp.Models;
 using System.Data.Entity;
+
 namespace MasterCounter.Tests
 {
     /// <summary>
