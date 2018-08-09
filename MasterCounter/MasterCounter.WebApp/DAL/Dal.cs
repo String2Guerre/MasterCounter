@@ -15,14 +15,21 @@ namespace MasterCounter.WebApp.DAL
             DB = new DatabaseContext();
         }
 
+
         public void Dispose()
         {
-            throw new NotImplementedException();
+            DB.Dispose();
         }
 
         public List<Skill> GetAllSkills()
         {
             return DB.Skills.ToList();
+        }
+
+        public void CreateSkill(string name)
+        {
+            DB.Skills.Add(new Skill { Name = name });
+            DB.SaveChanges();
         }
     }
 }
