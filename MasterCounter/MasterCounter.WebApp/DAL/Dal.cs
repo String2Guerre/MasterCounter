@@ -31,5 +31,15 @@ namespace MasterCounter.WebApp.DAL
             DB.Skills.Add(new Skill { Name = name });
             DB.SaveChanges();
         }
+
+        public void UpdateSkill(int id, string name)
+        {
+            Skill skill = DB.Skills.FirstOrDefault(s => s.Id == id);
+            if (skill != null)
+            {
+                skill.Name = name;
+                DB.SaveChanges();
+            }
+        }
     }
 }

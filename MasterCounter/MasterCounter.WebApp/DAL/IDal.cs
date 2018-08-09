@@ -10,6 +10,7 @@ namespace MasterCounter.WebApp.DAL
     public interface IDal : IDisposable
     {
         void CreateSkill(string name);
+        void UpdateSkill(int id, string name);
         List<Skill> GetAllSkills();
 
     }
