@@ -13,6 +13,10 @@ namespace Tests
         [TestMethod]
         public void CreateAndCheckSkill()
         {
+            IDatabaseInitializer<DatabaseContext> init = new DropCreateDatabaseAlways<DatabaseContext>();
+            Database.SetInitializer(init);
+            init.InitializeDatabase(new DatabaseContext());
+
             using (IDal dal = new Dal())
             {
                 dal.CreateSkill("puzzle");
