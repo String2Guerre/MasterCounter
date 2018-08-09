@@ -9,7 +9,7 @@ namespace MasterCounter.WebApp.Models
     public class Skill
     {
         public int Id { get; set; }
-        [Required]
+        [Required, MaxLength(30)]
         public string Name { get; set; }
 
         public ICollection<User> Users { get; set; }
